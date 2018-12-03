@@ -2,8 +2,8 @@ node {
    def commit_id
    stage('Preparation') {
      checkout scm
-     sh "git rev-parse --short C:\Users\SwaminathanRamanan\docker-demo\.git\HEAD > C:\Users\SwaminathanRamanan\docker-demo\.git\commit-id"
-     commit_id = readFile('C:\Users\SwaminathanRamanan\docker-demo\.git/commit-id').trim()
+     sh "git rev-parse --short C:/UsersSwaminathanRamanan/docker-demo/.git/HEAD > C:/Users/SwaminathanRamanan/docker-demo/.git/commit-id"
+     commit_id = readFile('C:/Users/SwaminathanRamanan/docker-demo/.git/commit-id').trim()
    }
    stage('test') {
      def myTestContainer = docker.image('node:4.6')
